@@ -48,6 +48,9 @@ Manage projects and tasks using a kanban board. A board contains lists and tasks
 <h3>Dashboard</h3>
 <img width="1007" alt="dashboard" src="https://user-images.githubusercontent.com/81368377/124360274-7e92f300-dc31-11eb-863b-7c2a04c26f90.png">
 
+<h3>Change Background</h3>
+<img width="1435" alt="Screen Shot 2021-07-03 at 7 22 16 PM" src="https://user-images.githubusercontent.com/81368377/124360762-26a9bb80-dc34-11eb-9d21-0b684591aa1c.png">
+</br>
 <h2>Getting Started</h2> 
 1. Head to my  <a href="https://bambello.herokuapp.com/#/board/60bb8a47bfc2a07e2ada4b0f" target="_blank"> Bambello Repository</a> and clone the project or download the files. 
 </br>
