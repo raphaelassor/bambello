@@ -74,6 +74,11 @@ You shuold get a console ouput that the server is up and running at localhost:30
 
 the app will be up and running at localhost:3000 in your browser. enjoy ! 
 
-
+<h2> Technology Stack </h2>
+The technology stack i used was MERN - MongoDB, Express, React, Node.js . 
+</br> 
+The app uses webSockets to update the board in real-time , without the need to refresh the page to get updates. 
+</br>
+The API calls to the backend are done with the REST API method , and we used middlewares to authenticate and authorize actions.
 
    
