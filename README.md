@@ -43,11 +43,34 @@ Manage projects and tasks using a kanban board. A board contains lists and tasks
   <img alt="menu" src="https://user-images.githubusercontent.com/81368377/124360226-51464500-dc31-11eb-88d1-66f163117d58.png">
   </br> 
   <h3>Filter</h3>
-  filter.png<img width="1440" alt="filter" src="https://user-images.githubusercontent.com/81368377/124360252-6a4ef600-dc31-11eb-9d15-f51d6a98c382.png">
+<img width="1440" alt="filter" src="https://user-images.githubusercontent.com/81368377/124360252-6a4ef600-dc31-11eb-9d15-f51d6a98c382.png">
 </br>
 <h3>Dashboard</h3>
-dashboard.png<img width="1007" alt="dashboard" src="https://user-images.githubusercontent.com/81368377/124360274-7e92f300-dc31-11eb-863b-7c2a04c26f90.png">
+<img width="1007" alt="dashboard" src="https://user-images.githubusercontent.com/81368377/124360274-7e92f300-dc31-11eb-863b-7c2a04c26f90.png">
 
+<h2>Getting Started</h2> 
+1. Head to my  <a href="https://bambello.herokuapp.com/#/board/60bb8a47bfc2a07e2ada4b0f" target="_blank"> Bambello Repository</a> and clone the project or download the files. 
+</br>
+ ```
+git clone https://github.com/raphaelassor/bambello.git
+```
+2. Enter the backend folder and make sure you have node_modules installed. After that we will initiate the server with 'npm start' 
+ ```
+cd backend 
+npm i 
+npm start
+```
+You shuold get a console ouput that the server is up and running at port 3030
+
+3. Enter the frontend folder and repeat the same process. 
+ ```
+cd frontend
+npm i 
+npm start
+```
+You shuold get a console ouput that the server is up and running at localhost:3000.
+
+the app will be up and running at localhost:3000 in your browser. enjoy ! 
 
 
 
