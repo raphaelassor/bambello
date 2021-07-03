@@ -51,11 +51,13 @@ Manage projects and tasks using a kanban board. A board contains lists and tasks
 <h2>Getting Started</h2> 
 1. Head to my  <a href="https://bambello.herokuapp.com/#/board/60bb8a47bfc2a07e2ada4b0f" target="_blank"> Bambello Repository</a> and clone the project or download the files. 
 </br>
- ```
+
+```
 git clone https://github.com/raphaelassor/bambello.git
 ```
 2. Enter the backend folder and make sure you have node_modules installed. After that we will initiate the server with 'npm start' 
- ```
+
+```
 cd backend 
 npm i 
 npm start
