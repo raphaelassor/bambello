@@ -1,0 +1,46 @@
+.checklist-preview {
+    margin-bottom: rem(40px);
+
+    h3 {
+        cursor: pointer;
+        word-break: break-all;
+    }
+
+    .title-editor {
+        margin-bottom: 21px;
+        svg {
+            width: 25px;
+            height: 25px;
+            margin-inline-end: 16px;
+        }
+        textarea {
+            width: 100%;
+            font-size: 16px;
+            font-weight: bold;
+            color: $clr7;
+            background-color: transparent;
+            overflow: hidden;
+            border-radius: $borderRad1;
+            box-shadow: unset;
+            margin-bottom: 6px;
+            resize: none;
+            min-height: 56px;
+            padding: 8px 12px;
+            background-color: rgba(9, 30, 66, 0.04);
+            border: 0.1em solid rgba(9, 30, 66, 0.13);
+        }
+        .checklist-controllers {
+            color: #6b778c;
+            font-size: 24px;
+            .primary-btn{
+                margin-inline-end: 4px;
+            }
+            .close-svg {
+                cursor: pointer;
+                &:hover {
+                    color: $clr4;
+                }
+            }
+        }
+    }
+}

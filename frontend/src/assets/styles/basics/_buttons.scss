@@ -1,0 +1,57 @@
+.primary-btn {
+    background-color: $clr1;
+    box-shadow: none;
+    border: none;
+    color: $clr2;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    border-radius: $borderRad1;
+    cursor: pointer;
+    padding: 6px 12px;
+
+    &:hover {
+        background-color: #026aa7;
+    }
+    &:active{
+        background-color: #055a8c;
+    }
+}
+
+.secondary-btn {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    border-radius: $borderRad1;
+    cursor: pointer;
+    padding: 6px 12px;
+    border: none;
+    box-shadow: none;
+    background-color: rgba(9, 30, 66, 0.04);
+    transition-property: background-color, border-color, box-shadow;
+    transition-duration: 85ms;
+    transition-timing-function: ease;
+    &:hover {
+        background-color: rgba(9, 30, 66, 0.08);
+    }
+    &:active{
+        background-color: #e4f0f6;
+        color: $clr1;
+    }
+}
+.danger-btn{
+    background-color: $clr8;
+    border: none;
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 6px 12px;
+    &:hover{
+        background-color: darken($clr8, 5%);
+    }
+}
+
+.wide-btn{
+    padding-left: 24px;
+    padding-right: 24px;
+}

@@ -1,0 +1,30 @@
+.pop-over-archive-details {
+    width: 22.5rem;
+    a {
+        text-decoration: none;
+        color: $clr4;
+    }
+    .card-preview-container {
+        &:hover {
+            filter: none;
+        }
+        .card-preview {
+            max-width: 100%;
+        }
+    }
+    .card-preview-edit-btn {
+        display: none;
+    }
+    .archive-card-actions {
+        margin: 0 0 8px 8px;
+        button {
+            background-color: unset;
+            color: $clr3;
+            text-decoration: underline;
+            display: inline-block;
+            &:hover {
+                color: $clr4;
+            }
+        }
+    }
+}

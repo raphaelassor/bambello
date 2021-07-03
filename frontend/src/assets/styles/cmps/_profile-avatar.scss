@@ -1,0 +1,14 @@
+.profile-avatar {
+    cursor: pointer;
+    .avatar {
+        position: relative;
+        color: $clr4;
+        display: flex;
+        background-color: #dfe1e6;
+        font-size: 12px;
+        font-weight: 700;
+        &:hover {
+            background-color: darken(#dfe1e6, 10%);
+        }
+    }
+}

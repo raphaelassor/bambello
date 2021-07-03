@@ -1,0 +1,53 @@
+.pop-over-move-content{
+    width: 20rem;
+    .move-selection{
+        margin-bottom: 16px;
+        .board-select{
+            margin-bottom: 8px;
+            flex-grow: 1;
+            width: 100%;
+        }
+        .list-select{
+            margin-inline-end: 8px;
+            flex-grow: 1;
+        }
+        .position-select{
+            width:80px;
+        }
+        .clean-select{
+           
+            .MuiFilledInput-root{
+                background-color: rgba(9,30,66,.04);
+                transition: .3s;
+                &:hover{
+                    background-color: rgba(9,30,66,.08)
+                }
+            }
+            svg{
+                display: none;
+            }
+            .MuiFilledInput-underline{
+                &::before{
+                    content: '';
+                    border-bottom: none;
+                }
+                &::after{
+                    content: '';
+                    border-bottom: none;
+                }
+            }
+            .MuiFilledInput-input{
+                box-sizing: border-box;
+                height: 50px;
+            }
+            .MuiSelect-selectMenu{
+                color:$clr4;
+                font-size: 14px;
+            }
+            .MuiInputLabel-filled.MuiInputLabel-shrink{
+                color:$clr3;
+                font-size: 16px;
+            }
+        }
+    }
+}

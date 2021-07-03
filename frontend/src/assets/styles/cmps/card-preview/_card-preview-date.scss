@@ -1,0 +1,102 @@
+.card-preview-date {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    line-height: 16px;
+    padding: 2px 5px;
+    border-radius: $borderRad1;
+    color: #6b778c;
+
+    :first-child {
+        margin-inline-end: 3px;
+    }
+
+    .card-preview-date-icon {
+        display: flex;
+        font-family: fontawesome-far;
+        &::before {
+            width: 16px;
+            height: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            content: "\f017";
+        }
+    }
+
+    &.overdue {
+        color: $clr2;
+        background-color: #ec9488;
+        .card-preview-date-icon::before {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 16px;
+            height: 16px;
+            content: "\f017";
+        }
+        @include for-wide-layout {
+            &:hover {
+                background-color: #eb5a46;
+                .card-preview-date-icon::before {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 16px;
+                    height: 16px;
+                    content: "\f0c8";
+                }
+            }
+        }
+    }
+
+    &.done {
+        color: $clr2;
+        background-color: #61bd4f;
+
+        .card-preview-date-icon::before {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 16px;
+            height: 16px;
+            content: "\f017";
+        }
+        @include for-wide-layout {
+            &:hover {
+                background-color: #519839;
+                .card-preview-date-icon::before {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 16px;
+                    height: 16px;
+                    content: "\f274";
+                }
+            }
+        }
+    }
+
+    &.due-soon {
+        color: $clr2;
+        background-color: #f2d600;
+    }
+    @include for-wide-layout {
+        &:hover {
+            .card-preview-date-icon::before {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 16px;
+                height: 16px;
+                content: "\f0c8";
+            }
+            background-color: darken(#f3f4f6, 5%);
+        }
+    }
+}
+.card-details-date {
+    .pop-over {
+        top: 0;
+    }
+}

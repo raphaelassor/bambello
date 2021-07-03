@@ -1,0 +1,102 @@
+/* Breakpoint mixins */
+
+@mixin for-mobile-layout {
+    @media (max-width: $mobile-breakpoint) {
+        @content;
+    }
+}
+
+@mixin for-narrow-layout {
+    @media (min-width: $mobile-breakpoint) {
+        @content;
+    }
+}
+
+@mixin for-normal-layout {
+    @media (min-width: $narrow-breakpoint) {
+        @content;
+    }
+}
+
+@mixin for-wide-layout {
+    @media (min-width: $normal-breakpoint) {
+        @content;
+    }
+}
+
+@mixin for-details-narrow-layout {
+    @media (min-width: $details-breakpoint) {
+        @content;
+    }
+}
+
+@mixin for-dashboard-narrow-layout {
+    @media (min-width: $dashboard-breakpoint) {
+        @content;
+    }
+}
+
+@mixin for-header-narrow-layout {
+    @media (max-width: $header-breakbpoint) {
+        @content;
+    }
+}
+
+/* Media  Mixins */
+@mixin aspect-ratio($width, $height) {
+    position: relative;
+    overflow: hidden;
+    &::before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: ($height / $width) * 100%;
+    }
+    > * {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    > img {
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+// Mixin for removing hover efects on iphone screen
+@mixin hover-supported {
+    @media not all and (pointer: coarse) {
+        &:hover {
+            @content;
+        }
+    }
+}
+
+@mixin upload-file-preview {
+    margin-bottom: 8px;
+    border-bottom: 1px solid rgba(9, 30, 66, 0.13);
+    label {
+        display: block;
+        padding: 6px 12px;
+        margin-bottom: 8px;
+        cursor: pointer;
+        height: 32px;
+        line-height: 32px;
+        width: 20rem;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        &:hover {
+            background-color: #091e420a;
+        }
+    }
+    input {
+        opacity: 0;
+        height: 0;
+        width: 0;
+        position: absolute;
+    }
+}

@@ -1,0 +1,265 @@
+.dashboard-container {
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    padding: 120px 0;
+    top: 0;
+    right: 0;
+    overflow-y: scroll;
+
+    .close-svg {
+        cursor: pointer;
+        position: absolute;
+        right: 2%;
+        top: 2%;
+        width: 30px;
+        height: 30px;
+        color: $clr2;
+        z-index: 100;
+        transition: transform 0.2s;
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+
+    .general-statistics {
+        width: 100%;
+        margin-bottom: 80px;
+        flex-direction: column;
+        align-items: center;
+        .stats {
+            width: fit-content;
+            border-radius: $borderRad1;
+            background-color: #ffff;
+            height: 110px;
+            min-width: 270px;
+            width: 270px;
+            margin-bottom: 20px;
+
+            &:nth-child(1) {
+                position:relative;
+                overflow:hidden;
+                background-image: linear-gradient(to right, #4fa8f8, #2fb4f5, #23beee, #37c7e5, #55ceda);
+                .chart-icon {
+                   width: 225px;
+                    align-self: flex-end;
+                    transform: rotate(347deg);
+                    position: absolute;
+                    right: -15px;
+                    height: 80px;
+                }
+            }
+            &:nth-child(2) {
+                background-image: linear-gradient(to left, #e1bf78, #e7ba78, #ecb579, #f1b17b, #f5ac7e);
+            }
+            &:nth-child(3) {
+                background-image: linear-gradient(to right, #ec7299, #ef768e, #f07b84, #ef817b, #ec8773);
+            }
+
+            .content {
+                padding: 8px 0 8px 8px;
+                color: white;
+                h3 {
+                    // color: $clr3;
+                    font-weight: 600;
+                    font-size: 20px;
+                    margin-bottom: 2px;
+                }
+                svg {
+                    color: white;
+                    width: 20px;
+                    height: 20px;
+                    margin-inline-end: 4px;
+                }
+            }
+            h4 {
+                font-weight: 800;
+                font-size: 35px;
+                line-height: 35px;
+                padding: 0 0 4px 4px;
+            }
+            .CircularProgressbar {
+                width: 80px;
+                height: 80px;
+                align-self: flex-end;
+                margin: 0 30px 12px 0;
+            }
+        }
+    }
+
+    .board-charts {
+        width: 100vw;
+
+        h3 {
+            text-align: center;
+            font-weight: 600;
+            color: $clr2;
+            font-size: 25px;
+            margin-bottom: 16px;
+        }
+
+        .chart {
+            background: #25252547;
+            padding: 20px;
+            border-radius: $borderRad1;
+            margin-bottom: 20px;
+        }
+
+        canvas {
+            max-width: 300px;
+            height: 300px;
+        }
+    }
+
+    @include for-dashboard-narrow-layout {
+        .general-statistics {
+            flex-direction: unset;
+            > *:not(:last-child) {
+                margin-inline-end: 25px;
+            }
+        }
+
+        .board-charts {
+            > *:not(:last-child) {
+                margin-inline-end: 20px;
+            }
+        }
+
+        canvas {
+            max-width: 350px;
+            height: 350px;
+        }
+    }
+}
+
+// .dashboard-container {
+//     z-index: 10;
+//     position: fixed;
+//     width: 100%;
+//     height: 100%;
+//     padding: 120px 0;
+//     top: 0;
+//     right: 0;
+//     overflow-y: scroll;
+
+//     .close-svg {
+//         cursor: pointer;
+//         position: absolute;
+//         right: 2%;
+//         top: 2%;
+//         width: 30px;
+//         height: 30px;
+//         color: $clr2;
+//         z-index: 100;
+//         transition: transform 0.2s;
+//         &:hover {
+//             transform: scale(1.2);
+//         }
+//     }
+
+//     .general-statistics {
+//         width: 100%;
+//         margin-bottom: 80px;
+//         flex-direction: column;
+//         align-items: center;
+//         .stats {
+//             width: fit-content;
+//             border-radius: $borderRad1;
+//             background-color: #ffff;
+//             height: 140px;
+//             min-width: 340px;
+//             width: 340px;
+//             margin-bottom: 20px;
+
+//             &:nth-child(1) {
+//                 .logo-container {
+//                     background-color: $clr1;
+//                 }
+
+//                 .content {
+//                     h3 {
+//                         color: $clr1;
+//                     }
+//                 }
+//             }
+
+//             &:nth-child(2) {
+//                 .logo-container {
+//                     background-color: #f2d600;
+//                 }
+
+//                 .content {
+//                     h3 {
+//                         color: #f2d600;
+//                     }
+//                 }
+//             }
+
+//             &:nth-child(3) {
+//                 .logo-container {
+//                     background-color: #eb5a46;
+//                 }
+
+//                 .content {
+//                     h3 {
+//                         color: #eb5a46;
+//                     }
+//                 }
+//             }
+
+//             .logo-container {
+//                 border-top-left-radius: $borderRad1;
+//                 border-bottom-left-radius: $borderRad1;
+//                 height: 100%;
+//                 min-width: 125px;
+//                 margin-inline-end: 16px;
+//                 svg {
+//                     color: $clr2;
+//                     width: 60px;
+//                     height: 60px;
+//                 }
+//             }
+
+//             .content {
+//                 > * {
+//                     font-weight: 600;
+//                     font-size: 25px;
+//                     line-height: 30px;
+//                 }
+
+//                 h3 {
+//                     // color: $clr3;
+//                     margin-bottom: 2px;
+//                 }
+
+//                 h4 {
+//                     color: $clr4;
+//                 }
+//             }
+//         }
+//     }
+
+//     .board-charts {
+//         width: 100vw;
+
+//         h3 {
+//             text-align: center;
+//             font-weight: 600;
+//             color: $clr2;
+//             font-size: 25px;
+//             margin-bottom: 16px;
+//         }
+
+//         .chart {
+//             background: #25252547;
+//             padding: 20px;
+//             border-radius: $borderRad1;
+//             margin-bottom: 20px;
+//         }
+
+//         canvas {
+//             max-width: 300px;
+//             height: 300px;
+//         }
+//     }

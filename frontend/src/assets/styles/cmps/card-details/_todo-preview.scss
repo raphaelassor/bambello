@@ -1,0 +1,112 @@
+.todo-preview-container {
+    border-radius: $borderRad1;
+    &:hover {
+        background-color: rgba(9, 30, 66, 0.04);
+    }
+    .todo-preview {
+        width: 100%;
+        min-height: 36px;
+        border-radius: $borderRad1;
+        transform-origin: left bottom;
+        transition-property: transform, opacity, height, padding, margin;
+        transition-duration: 0.14s;
+        transition-timing-function: ease-in;
+
+        .checked,
+        .non-checked {
+            margin: 6px 18px 6px 2px;
+            cursor: pointer;
+            transition: opacity 0.3s;
+            path {
+                width: 16px;
+                height: 16px;
+            }
+            &:hover {
+                opacity: 60%;
+            }
+        }
+
+        .checked {
+            path {
+                color: $clr1;
+            }
+        }
+        .non-checked {
+            path {
+                color: #dfe1e6;
+            }
+        }
+
+        textarea {
+            align-self: center;
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            background-color: transparent;
+            overflow: hidden;
+            border-radius: $borderRad1;
+            box-shadow: unset;
+            font-size: 14px;
+            resize: none;
+
+            &:focus {
+                cursor: text;
+                min-height: 56px;
+                // margin-inline-start: 8px;
+                padding: 8px 12px;
+                margin-bottom: 6px;
+                background-color: rgba(9, 30, 66, 0.04);
+                border: 0.1em solid rgba(9, 30, 66, 0.13);
+
+                .checked,
+                .non-checked {
+                    align-self: unset;
+                }
+            }
+
+            &.done:not(:focus) {
+                text-decoration-line: line-through;
+                color: $clr3;
+            }
+        }
+
+        .delete-svg {
+            cursor: pointer;
+            align-self: center;
+            margin-top: 8px;
+            &:hover {
+                background-color: rgba(9, 30, 66, 0.08);
+                border-radius: $borderRad1;
+            }
+        }
+    }
+    .checklist-controllers {
+        color: #6b778c;
+        font-size: 24px;
+        .primary-btn {
+            margin-inline-start: 40px;
+            margin-inline-end: 4px;
+        }
+        .close-svg {
+            cursor: pointer;
+            &:hover {
+                color: $clr4;
+            }
+        }
+    }
+
+    @include for-details-narrow-layout  {
+        .todo-preview {
+            &:hover {
+                .delete-svg {
+                    display: flex;
+                }
+            }
+        }
+
+        .delete-svg {
+            display: none;
+        }
+    }
+}

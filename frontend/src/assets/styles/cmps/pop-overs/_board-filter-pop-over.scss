@@ -1,0 +1,52 @@
+.board-filter-pop-over{
+    width:22.5rem;
+    .filter-label-preview {
+        padding: 4px 10px 4px 4px;
+        width: 100%;
+        cursor: pointer;
+        &:hover{
+            background-color: rgba(9,30,66,.04);
+        }
+        .icon-check {
+            line-height: 20px;
+            width: 20px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            svg {
+                width: 14px;
+                height: 16px;
+                path {
+                    fill: #42526e;
+                }
+            }
+        }
+        .filter-label-color {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border-radius: 4px;
+            margin-right: 8px ;
+        }
+        span {
+            &:last-of-type {
+                flex-grow: 1;
+            }
+        }
+    }
+    .pop-over-input{
+        margin: 0;
+    }
+    hr{
+        background-color: rgba(9,30,66,.13);
+        border: 0;
+        height: 1px;
+        margin: 16px 0;
+        padding: 0;
+        width: 100%;
+    }
+    p{
+        padding:10px 8px 2px 8px ;
+        color:$clr3
+    }
+}

@@ -1,0 +1,35 @@
+.board-app {
+    height: calc(100vh - 40px); // check responsive
+}
+
+.card-list-container {
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 100%;
+    margin: 0 4px;
+    white-space: nowrap;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    
+    &::-webkit-scrollbar {
+        height: 12px;
+    }
+    
+    /* Track */
+    &::-webkit-scrollbar-track {
+        border-radius: $borderRad2;
+        margin: 0 5px;
+        background-color: rgba($color: #000000, $alpha: .15);
+    }
+    
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        border-radius: $borderRad2;
+        background-color: rgba($color: #FFF, $alpha: .35);
+    }
+    
+    /* Handle on hover */
+    // &::-webkit-scrollbar-thumb:hover {
+    //     background: #555;
+    // }
+}

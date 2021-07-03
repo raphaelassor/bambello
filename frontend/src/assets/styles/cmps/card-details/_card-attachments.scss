@@ -1,0 +1,86 @@
+.card-attachments {
+    margin-bottom: 28px;
+    .window-modal-title {
+        svg {
+            margin-inline-end: 17px;
+            max-width: 25px;
+            max-height: 20px;
+        }
+    }
+
+    .attachments-container {
+        margin-inline-start: 40px;
+        margin-bottom: 16px;
+
+        .attach-preview {
+            height: 84px;
+            cursor: pointer;
+            border-radius: $borderRad1;
+            transition-property: background-color, border-color, box-shadow;
+            transition-duration: 85ms;
+            transition-timing-function: ease;
+            margin-bottom: 8px;
+            &:hover {
+                background-color: rgba(9, 30, 66, 0.04);
+                .img-container{
+                    background-color: rgba(9, 30, 66, 0.08);
+                }
+            }
+        }
+
+
+        .img-container {
+            height: 100%;
+            border-radius: $borderRad1;
+            background-color: $clr6;
+            max-width: 112px;
+            margin-inline-end: 15px;
+            transition-property: background-color, border-color, box-shadow;
+            transition-duration: 85ms;
+            transition-timing-function: ease;
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: $borderRad1;
+                object-fit: contain;
+                object-position: center;
+            }
+        }
+
+        .attach-content {
+            color: $clr7;
+            padding: 8px;
+            .file-name {
+                font-weight: bold;
+                &::after {
+                    font-family: fontawesome-fas;
+                    content: "\f35d";
+                }
+            }
+
+            .time-n-actions {
+                color: $clr3;
+                margin-bottom: 8px;
+                > *:not(:last-child) {
+                    margin-inline-end: 2px;
+                }
+                button {
+                    cursor: pointer;
+                    color: $clr3;
+                    border: none;
+                    padding: 0;
+                    background-color: transparent;
+                    text-decoration: underline;
+
+                    &:hover {
+                        color: $clr7;
+                    }
+                }
+            }
+
+        }
+    }
+    .secondary-btn{
+        margin-inline-start: 40px;
+    }
+}

@@ -1,0 +1,22 @@
+.card-preview-comments {
+    display: flex;
+    align-items: center;
+    padding: 2px 5px;
+    font-size: 12px;
+    line-height: 16px;
+    color: #6b778c;
+
+    .comment-icon {
+        display: flex;
+        font-family: fontawesome-far;
+        margin-inline-end: 5px;
+        &::before {
+            width: 16px;
+            height: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            content: "\f075";
+        }
+    }
+}

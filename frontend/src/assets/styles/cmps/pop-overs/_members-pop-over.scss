@@ -1,0 +1,28 @@
+.members-pop-over-content{
+    width:20rem;
+}
+.member-pop-over-preview{
+    cursor: pointer;
+    padding: 4px 0 4px 4px;
+    
+    &:hover{
+        background-color: rgba(9,30,66,.04);
+    }
+    span{
+        align-self: center;
+        margin-inline-end: 8px;
+        display: flex;
+        align-items: center;
+        &:first-of-type{
+            line-height: 2rem;
+            flex-grow: 1;
+        }
+        &.icon-check{
+           padding: 5px 11px 5px 5px;
+            line-height: 1rem;
+          
+        }
+    }
+  
+
+}

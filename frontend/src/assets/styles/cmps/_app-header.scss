@@ -1,0 +1,201 @@
+/* HOME PAGE HEADER */
+.main-header {
+    min-height: 40px;
+    max-height: 40px;
+    padding: 4px;
+    &.in-board {
+        background-color: rgba($color: #000000, $alpha: 0.15);
+    }
+    &.out-board {
+        background-color: $clr1;
+    }
+    .back-screen {
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-height: 100vh;
+        min-width: 100vw;
+    }
+
+    .boards-btn {
+        position: relative;
+    }
+
+    .btn-header-container {
+        flex-grow: 1;
+        max-width: 45%;
+        &:first-of-type {
+            justify-content: flex-start;
+        }
+        &:last-of-type {
+            justify-content: flex-end;
+        }
+    }
+    // header buttons //
+    .btn-header {
+        // background-color: rgba(255, 255, 255, 0.3), rgba(9, 30, 66, 0.04), rgba(255, 255, 255, 0.2);
+        background-color: rgba(255, 255, 255, 0.3);
+        border-radius: 3px;
+        border: none;
+        align-items: center;
+        align-self: center;
+        color: #ffffff;
+        display: flex;
+        font-weight: bold;
+        height: 32px;
+        line-height: 32px;
+        margin: 0 4px 0 0;
+        padding: 0 6px 0;
+        white-space: nowrap;
+        transition: 0.15s;
+        cursor: pointer;
+        span {
+            padding: 0 2px 0 8px;
+        }
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        &.new-notific {
+            background-color: #e54c31d6;
+        }
+    }
+
+    .input-header-wrapper {
+        background-color: rgba(255, 255, 255, 0.3);
+        border-radius: 3px;
+        transition: 0.15s;
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+        }
+        &.extended-input {
+            flex-grow: 1;
+            background-color: white;
+            path {
+                fill: $clr4;
+            }
+            .input-header {
+                flex-grow: 1;
+                &::placeholder {
+                    color: $clr4;
+                }
+            }
+            &:hover {
+                background-color: white;
+            }
+        }
+        .input-header {
+            height: 32px;
+            background-color: transparent;
+            border: none;
+            align-self: center;
+            border-radius: 3px;
+            width: 156px;
+            padding: 8px 0px 8px 8px;
+            &::placeholder {
+                color: white;
+            }
+        }
+        svg {
+            align-self: center;
+            margin-inline-end: 8px;
+        }
+        path {
+            fill: white;
+        }
+    }
+
+    .btn-header-icon {
+        display: inline-block;
+        fill: white;
+        flex-shrink: 0;
+        line-height: 1;
+        width: 20px;
+        height: 20px;
+        color: rgb(255, 255, 255);
+    }
+    .logo {
+        font-style: normal;
+        transition: 0.15s;
+        // margin: 0 2.2rem; // RESPONSIVE 
+        margin: 0 1.2rem;
+        a {
+            text-decoration: none;
+            display: flex;
+        }
+        span {
+            color: rgba(255, 255, 255, 0.5);
+            font-weight: bold;
+            font-size: 20px;
+        }
+        svg {
+            align-self: flex-end;
+        }
+        path {
+            fill: rgba(255, 255, 255, 0.5);
+        }
+        &:hover {
+            path {
+                fill: rgba(255, 255, 255, 0.8);
+            }
+            span {
+                color: rgba(255, 255, 255, 0.8);
+            }
+        }
+    }
+    .header-modal {
+        position: fixed;
+        background-color: white;
+        box-shadow: 0 12px 24px -6px #091e4240, 0 0 0 1px #091e4214;
+        top: 44px;
+        min-height: 5rem;
+        bottom: auto;
+        max-height: calc(100% - 48px);
+        &.board-search {
+            left: 0;
+            width: 10rem;
+            input {
+                width: calc(100% - 20px);
+                margin: 5px 3px;
+            }
+        }
+    }
+}
+.user-notifics {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+@include for-header-narrow-layout {
+    .main-header {
+        .input-header-wrapper {
+            width: 32px;
+            input {
+                display: none;
+            }
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            svg {
+                margin-inline-end: 0;
+            }
+        }
+        .boards-btn {
+            margin-inline-end: 0;
+            span {
+                display: none;
+            }
+        }
+    }
+}
+
+@include for-mobile-layout {
+    .main-header {
+        .btn-header-container {
+            .btn-header {
+                &.wide-layout{
+                    display:none;
+                }
+            }
+        }
+    }
+}

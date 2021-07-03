@@ -1,0 +1,68 @@
+.home-header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
+    transition: background-color 1s ease 0s;
+    &.visibleBg {
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(black, 0.3);
+    }
+    nav {
+        font-family: SourceSans-Semibold;
+        padding: 16px;
+        display: flex;
+        flex-wrap: wrap;
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 36px;
+            line-height: 36px;
+            font-family: SourceSans-Bold;
+            color: #293856;
+            svg {
+                width: 26px;
+                height: 26px;
+                margin-right: 8px;
+            }
+        }
+        .nav-btns {
+            display: flex;
+            align-items: center;
+            > * {
+                padding: 0 10px;
+                transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+                line-height: 36px;
+                font-size: 17.5px;
+                border-radius: $borderRad1;
+            }
+            .login-btn {
+                letter-spacing: 1px;
+                color: #0065ff;
+                // font-weight: 500;
+                &:hover {
+                    color: #0051cc;
+                    text-decoration: underline;
+                }
+            }
+            .signup-btn {
+                letter-spacing: 1px;
+                color: #fff;
+                background-color: #0065ff;
+                &:hover {
+                    background-color: #0051cc;
+                }
+                // font-weight: 500;
+            }
+        }
+    }
+}
+
+// @media screen and (min-width: 560px) {
+//     .nav-btns {
+//         > * {
+//             padding: 0 10px;
+//         }
+//     }
+// }

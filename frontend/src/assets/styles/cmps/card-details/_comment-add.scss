@@ -1,0 +1,44 @@
+.comment-add {
+    margin-bottom: 24px;
+    > *:first-child {
+        margin-inline-end: 10px;
+    }
+
+    .comment-editor {
+        background: $clr2;
+        box-shadow: 0 1px 2px -1px #091e4240, 0 0 0 1px #091e4214;
+        border-radius: $borderRad1;
+        min-height: 36px;
+
+        &.edit-open {
+            min-height: 84px;
+            padding: 8px 12px;
+        }
+
+        textarea {
+            border: none;
+            border-radius: $borderRad1;
+            min-height: 36px;
+            margin: 0;
+            width: 100%;
+            resize: none;
+
+            &:hover:not(:focus) {
+                box-shadow: 0 1px 2px -1px #091e4240, 0 0 0 1px #091e4214;
+            }
+
+            &:not(:focus) {
+                cursor: pointer;
+                padding: 8px 12px;
+            }
+
+            &::placeholder {
+                color: $clr3;
+            }
+        }
+
+        .primary-btn {
+            align-self: flex-start;
+        }
+    }
+}

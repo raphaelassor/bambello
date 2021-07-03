@@ -1,0 +1,11 @@
+.invite-details{
+    width:20rem;
+    .members{
+        max-height:250px;
+        overflow-y: auto;
+        flex-grow: 1;
+    }
+    .primary-btn{
+        margin-top: 12px;
+    }
+}

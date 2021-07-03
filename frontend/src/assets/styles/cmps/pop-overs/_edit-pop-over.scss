@@ -1,0 +1,54 @@
+.edit-pop-over {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 70;
+    .edit-pop-over-card {
+        // width: 256px;
+        // height: fit-content;
+        position: relative;
+    }
+    .edit-pop-over-save {
+        margin-top: 8px;
+        padding: 6px 24px;
+    }
+    .edit-pop-over-btns {
+        left: 100%;
+        position: absolute;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: fit-content;
+        z-index: 0;
+        transition: transform 85ms ease-in;
+        margin-inline-start: 8px;
+        a {
+            text-decoration: none;
+        }
+        //div buttons
+        > * {
+            margin-bottom: 4px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 3px;
+            color: #e6e6e6;
+            display: flex;
+            align-items: center;
+            padding: 6px 12px 6px 8px;
+            transition: transform 85ms ease-in;
+
+            //icons
+            > * {
+                width: 16px;
+                height: 16px;
+                margin-right: 5px;
+            }
+
+            &:hover {
+                background: rgba(0, 0, 0, 0.8);
+                color: #fff;
+                transform: translateX(5px);
+            }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+.cover-pop-over-content{
+    width:20rem;
+    .header-cover-preview,.full-cover-preview{
+            margin: 0;
+            height: 64px;
+            width: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            box-shadow: none;
+            cursor: pointer;
+            border-radius: 3px;
+            position: relative;
+            width: 134px;
+            border: 1px solid rgba(9, 30, 66, 0.08);
+            &.selected{
+                box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #0079bf;
+            }
+           
+    }
+    .cover-options {
+        margin-bottom:0.8rem;
+    }
+    .header-cover-preview{
+        .header-section{
+            height: 2rem;
+            border-radius: 3px;
+        }
+    }
+    .upload-preview{
+        @include upload-file-preview
+    }
+}

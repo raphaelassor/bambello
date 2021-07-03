@@ -1,0 +1,72 @@
+.board-menu-wrapper {
+    .menu-details {
+        width: 22.5rem;
+    }
+    ul{
+       
+        padding-bottom: 16px;
+        margin-bottom: 16px;
+        border-bottom: 1px solid rgba(9,30,66,.13);;
+    }
+    li,.activity {
+        border-radius: 3px;
+        display: block;
+        font-weight: 600;
+        line-height: 20px;
+        text-decoration: none;
+        padding: 6px 6px 6px 40px;
+        position: relative;
+        cursor: pointer;
+        &:hover{
+            background-color: rgba(9,30,66,.08);
+        }
+        .menu-icon,svg,span {
+            font-size: 20px;
+            height: 20px;
+            line-height: 20px;
+            width: 20px;
+            position: absolute;
+            top: 6px;
+            left: 12px;
+            color:#42526e;
+            path{
+                fill:#42526e
+            }
+        }
+        span{
+            display: inline-block;
+            border-radius:3px;
+        }
+    }
+    .activity{
+        margin-bottom: 0.8rem;
+        font-weight: 700;
+    }
+}
+.board-filter-pop-over{
+    width: 22.5rem;
+}
+
+// board-menu-content-frame {
+//     transition-property: transform, opacity;
+//     transition-duration: .12s;
+//     transition-timing-function: ease-in;
+//     transform: translateX(0);
+//     flex: 1 auto;
+//     width: 100%
+// }
+
+// .board-menu-content-frame .pop-over-list li>a .sub-name {
+//     font-size: 14px;
+//     line-height: 20px
+// }
+@include for-mobile-layout{
+    .board-menu-wrapper{
+
+        .menu-details {
+            width: 20rem;
+        }
+    }
+    
+}
+

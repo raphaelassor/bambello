@@ -1,0 +1,29 @@
+
+.card-preview-checklist {
+    color: #6b778c;
+    border-radius: $borderRad1;
+    display: flex;
+    align-items: center;
+    padding: 2px 5px;
+    font-size: 12px;
+    line-height: 16px;
+
+    .check-icon {
+        display: flex;
+        font-family: fontawesome-far;
+        margin-inline-end: 5px;
+        &::before {
+            width: 16px;
+            height: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            content: "\f14a";
+        }
+    }
+
+    &.done {
+        background-color: #61bd4f;
+        color: #fff;
+    }
+}

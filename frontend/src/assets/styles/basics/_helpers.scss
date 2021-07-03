@@ -1,0 +1,133 @@
+// Font Sizes
+.fs12 {
+    font-size: rem(12px);
+}
+.fs14 {
+    font-size: rem(14px);
+}
+.fs18 {
+    font-size: rem(18px);
+}
+.fs20 {
+    font-size: rem(20px);
+}
+.fs24 {
+    font-size: rem(24px);
+}
+.fs28 {
+    font-size: rem(28px);
+}
+.fs30 {
+    font-size: rem(30px);
+}
+
+// flex helpers
+
+.flex {
+    display: flex;
+
+    > *.full {
+        flex: 1;
+    }
+    
+    &.column {
+        flex-direction: column;
+    }
+    &.justify-center {
+        justify-content: center;
+    }
+    &.justify-space-between {
+        justify-content: space-between;
+    }
+    &.align-center {
+        align-items: center;
+    }
+    &.wrap {
+        flex-wrap: wrap;
+    }
+    &.column-reverse {
+        flex-direction: column-reverse;
+    }
+    &.justify-flex-end {
+        justify-content: flex-end;
+    }
+    &.align-flex-start {
+        align-items: flex-start;
+    }
+    &.full{
+        flex-grow: 1;
+    }
+}
+
+// List helpers
+.clean-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+// Media helpers
+.square-ratio {
+    @include aspect-ratio(1, 1);
+}
+.video-ratio {
+    @include aspect-ratio(16, 9);
+}
+.portrait-ratio {
+    @include aspect-ratio(9, 16);
+}
+
+// ICONS
+.icon-md {
+    height: 20px;
+    font-size: 16px;
+    line-height: 20px;
+    width: 20px;
+}
+.icon-sm{
+    height: 16px;
+    width:16px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-lg {
+    height: 32px;
+    line-height: 32px;
+    width: 32px;
+}
+
+// cleans
+.clean-link {
+    text-decoration: none;
+    color: inherit;
+}
+.clean-btn {
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+//AVATARS
+// .avatar-md {
+//     background-color: "#DFE1E6";
+//     color: "#172b4d";
+//     width: "32px";
+//     height: "32px";
+//     font-weight: "bold";
+//     font-size: "14px";
+// }
+
+
+
+
+//HIDDEN - SHOW
+.hidden {
+    display: none;
+}
+
+.show {
+    display: flex;
+}

@@ -1,0 +1,22 @@
+.date-pop-over-content{
+    
+    .btn-container{
+        margin-top: 1rem; 
+        button{
+            margin-top: 0.5rem;
+        }
+    }
+    .MuiPickersToolbar-toolbar{
+        h4,h6{
+            color: white !important; 
+        }
+        h4{
+            font-size: 2rem !important;
+        }
+        h6{
+            font-size: 1rem !important;
+        }
+        background-color: $clr1;
+    }
+    
+}

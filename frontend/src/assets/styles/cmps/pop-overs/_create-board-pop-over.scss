@@ -1,0 +1,59 @@
+.create-board-popover {
+    position: fixed;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    .board-preview {
+        width: 21rem;
+        margin-inline-end: 8px;
+        border-radius: 3px;
+        color: white;
+        padding: 10px 10px 10px 16px;
+        input {
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 24px;
+            padding:2px 8px;
+            background-color: transparent;
+            border:none;
+            border-radius: 3px;
+            color:white;
+            &:hover{
+                background: rgba(255, 255, 255, 0.15)
+            }
+            &::placeholder{
+                font-size: 16px;
+            font-weight: 700;
+            color: rgba(255, 255, 255, 0.637);
+
+            }
+            &:focus{
+                background: rgba(255, 255, 255, 0.3)
+            }
+        }
+    }
+    .color-palette {
+        display: grid;
+        grid-template-columns: repeat(3, 28px);
+        gap: 6px 8px;
+        margin-bottom: 0;
+        &:first-child {
+            margin-bottom: 6px;
+        }
+        label[name="label-color"] {
+            width: 28px;
+            height: 28px;
+            margin: 0;
+        }
+    }
+    .primary-btn{
+        margin-top: 8px;
+        &.disabled{
+            border: none;
+            color: #A5ADBA;
+            cursor: not-allowed;
+            background-color: #F4F5F7;
+        }
+    }
+}

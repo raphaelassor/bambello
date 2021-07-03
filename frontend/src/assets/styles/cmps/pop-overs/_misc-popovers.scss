@@ -1,0 +1,66 @@
+.user-notifics,
+.pop-over-boards-search {
+    width: 20rem;
+}
+.pop-over-boards-search {
+    a {
+        position: relative;
+        text-decoration: none;
+        max-width: 100%;
+        white-space: nowrap;
+        font-weight: bold;
+        font-size: 14px;
+        color: $clr4;
+        margin-bottom: 4px;
+        background-size: cover;
+        background-position: center center;
+
+        div {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            &::before {
+                background: #ffffff;
+                bottom: 0;
+                content: "";
+                left: 0;
+                opacity: 0.88;
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+        }
+        span:first-of-type {
+            min-width: 36px;
+            height: 36px;
+            display: block;
+            border-radius: 3px 0 0 3px;
+            margin-inline-end: 9px;
+            z-index: 1;
+            opacity: 0.7;
+            background-size: contain;
+            background-origin: content-box;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+        span:last-child {
+            z-index: 1;
+            text-overflow: ellipsis;
+            overflow-x: hidden;
+            align-self: center;
+        }
+        &:hover {
+            div {
+                &::before {
+                    background: #ffffff;
+                    bottom: 0;
+                    content: "";
+                    opacity: 0.78;
+                }
+            }
+            span:first-of-type {
+                opacity: 1;
+            }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+.activity-pop-over-details {
+    width: 22.5rem;
+    overflow: auto;
+    .filter-container {
+        margin: 0 0 6px;
+        padding: 0 0 12px;
+        width: 100%;
+        border-bottom: 1px solid rgba(9, 30, 66, 0.13);
+        button {
+            width: 50%;
+            padding: 8px;
+            color: $clr4;
+            text-decoration: underline;
+            background-color: transparent;
+            border-radius: 3px;
+            &:first-of-type {
+                margin-inline-end: 6px;
+            }
+            &:hover {
+                color: white;
+                background-color: #298fca;
+            }
+            &.selected {
+                background-color: $clr1;
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+    .activity-list-pop-over {
+        padding-top: 0.5rem;
+    }
+}

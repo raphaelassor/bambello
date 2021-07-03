@@ -1,0 +1,120 @@
+.card-list-wrapper {
+    min-width: 272px;
+    margin: 0 4px;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+    white-space: nowrap;
+
+    .card-list {
+        background-color: #ebecf0;
+        border-radius: $borderRad1;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        max-height: 100%;
+        position: relative;
+        white-space: normal;
+        
+        .card-list-header-input {
+            height: 100%;
+            padding: rem(5px) rem(5px);
+            border: 2px solid $clr1;
+            flex: 1;
+            border-radius: $borderRad1;
+            font-size: 14px;
+            transition: all 1s;
+            font-size: rem(16px);
+            font-weight: 600;
+            margin-inline-start: 3px;
+        }
+        .card-list-header {
+            display: flex;
+            justify-content: space-between;
+            padding: rem(5px) rem(5px);
+            h2 {
+                flex: 1;
+                margin-inline-start: 10px;
+                word-break: break-all;
+                cursor: pointer;
+                font-size: rem(16px);
+                padding-top: 7px;
+                font-weight: 600;
+            }
+            .card-list-btn-menu {
+                border-radius: $borderRad1;
+                width: 32px;
+                height: 32px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position:relative;
+                cursor: pointer;
+                i:before {
+                    color: #6b778c;
+                    font-size: 12px;
+                }
+                &:hover {
+                    background-color: rgba(9, 30, 66, 0.08);
+                    i:before {
+                        color: $clr4;
+                    }
+                }
+                &:active {
+                    background-color: rgba(9, 30, 66, 0.13);
+                }
+                .pop-over{
+                    top:32px;
+                    left:-3rem
+                }
+            }
+        }
+
+        .card-list-cards {
+            flex: 1 1 auto;
+            overflow-y: auto;
+            overflow-x: hidden;
+            margin: 0 4px;
+            padding: 0 4px;
+
+            &::-webkit-scrollbar {
+                width: 8px;
+            }
+            &::-webkit-scrollbar-track {
+                border-radius: $borderRad2;
+                margin-bottom: 2px;
+                background-color: #dadbe2;
+            }
+            &::-webkit-scrollbar-thumb {
+                border-radius: $borderRad2;
+                background-color: #bfc4ce;
+            }
+        }
+
+        .card-list-footer {
+            border-radius: $borderRad1;
+            font-size: 14px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            color: #6b778c;
+            margin: 5px 8px;
+            padding: 5px;
+            width: 228px;
+            padding-left: 6px;
+            svg {
+                margin-inline-end: 5px;
+                width: 14px;
+                height: 14px;
+            }
+
+            &:hover {
+                color: $clr4;
+                background-color: rgba(9, 30, 66, 0.08);
+            }
+            &:active {
+                background-color: rgba(9, 30, 66, 0.13);
+            }
+        }
+    }
+}

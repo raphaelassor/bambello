@@ -1,0 +1,27 @@
+.progress {
+    position: relative;
+    margin-bottom: rem(8px);
+    .precent {
+        color: $clr3;
+        font-size: 11px;
+        line-height: 10px;
+        text-align: center;
+        width: 32px;
+        margin-inline-end: 10px;
+    }
+}
+
+.progress-bar-container {
+    height: 8px;
+    width: 100%;
+    background-color: #e2e4e9;
+    border-radius: 5em;
+    text-align: center;
+    
+    .progress-bar {
+        height: 100%;
+        transition: width 0.3s;
+        border-top-left-radius: 5em;
+        border-bottom-left-radius: 5em;
+    }
+}

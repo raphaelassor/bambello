@@ -1,0 +1,9 @@
+.list-menu-content{
+    li{
+        cursor: pointer;
+        padding: 6px ;
+        &:hover{
+            background-color: #091e420a;
+        }
+    }
+}

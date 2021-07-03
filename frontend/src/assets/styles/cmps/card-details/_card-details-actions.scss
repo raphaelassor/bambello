@@ -1,0 +1,75 @@
+.details-actions-wrapper {
+    padding: 0 16px;
+    margin-bottom: 24px;
+    flex-direction: column;
+
+    .add-section,
+    .actions-section {
+        margin-bottom: 24px;
+        //only mobile
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 8px;
+    }
+
+    .suggested {
+        margin-bottom: 16px;
+    }
+
+    h4 {
+        grid-column: 1 / -1;
+        color: $clr3;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+        font-size: 12px;
+        margin-bottom: 0.5rem;
+    }
+
+    .actions-btn {
+        position: relative;
+        margin-bottom: 8px;
+        svg {
+            width: 16px;
+            height: 16px;
+        }
+        &.danger-btn {
+            path {
+                fill: white;
+            }
+        }
+        .actions-btn-content {
+            align-items: center;
+            min-height: 20px;
+            i,
+            svg {
+                color: #172b4dcc;
+                path {
+                    fill: #172b4dcc;
+                }
+                margin: 0 8px 0 -4px;
+            }
+            span {
+                line-height: 17px;
+            }
+            .remove {
+                &.MuiSvgIcon-root path {
+                    fill: white;
+                }
+            }
+        }
+        .danger-btn {
+            &:hover {
+                background-color: darken($clr8, 10%);
+            }
+        }
+    }
+
+    @include for-details-narrow-layout  {
+        .add-section,
+        .actions-section {
+            display: flex;
+            grid-template-columns: unset;
+            gap: unset;
+        }
+    }
+}

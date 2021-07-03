@@ -1,0 +1,51 @@
+.pop-over-content {
+    .mini-profile-container {
+        overflow-x: hidden;
+        overflow-y: auto;
+        min-width: 20rem;
+        padding: 8px 12px 12px;
+        .mini-profile {
+            display: flex;
+            .mini-profile-avatar {
+                margin-right: 12px;
+            }
+            .mini-profile-info {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 8px;
+                word-wrap: break-word;
+                :first-child {
+                    font-size: 16px;
+                    line-height: 20px;
+                    font-weight: 600;
+                    &:hover {
+                        cursor: pointer;
+                        text-decoration: underline;
+                    }
+                }
+                :not(:first-child) {
+                    color: #5e6c84;
+                    font-size: 14px;
+                }
+                :last-child {
+                    cursor: pointer;
+                    &:hover {
+                        color: $clr4;
+                    }
+                }
+            }
+        }
+    }
+    
+    .remove {
+        display: block;
+        position: relative;
+        margin: 0 -12px;
+        padding: 6px 12px;
+        font-weight: 400;
+        text-decoration: none;
+        &:hover {
+            background-color: rgba(9, 30, 66, 0.04);
+        }
+    }
+}

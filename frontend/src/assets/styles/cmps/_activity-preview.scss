@@ -1,0 +1,27 @@
+.activity-preview {
+    word-break: break-word;
+    > *:first-child {
+        margin-inline-end: 10px;
+    }
+
+    .member-name{
+        font-weight: bold;
+        margin-inline-end: 6px;
+    }
+
+    .publish-time{
+        font-size: 12px;
+        color: $clr3;
+        white-space: nowrap;
+    }
+
+    .comment-content{
+        .comment-body{
+            background-color: $clr2;
+            padding: 8px 12px;
+            width: fit-content;
+            box-shadow: 0 1px 2px -1px #091e4240, 0 0 0 1px #091e4214;
+            border-radius: $borderRad1;
+        }
+    }
+}

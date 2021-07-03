@@ -1,0 +1,41 @@
+.card-details-date {
+    margin: 0 8px 8px 0;
+    max-width: 100%;
+
+    svg {
+        cursor: pointer;
+    }
+
+    .secondary-btn {
+        margin-inline-start: 4px;
+        display: inline-block;
+        .due-msg {
+            font-size: 12px;
+            line-height: 16px;
+            padding: 0 4px;
+            text-transform: uppercase;
+            border-radius: 2px;
+            margin: auto 0 auto 8px;
+            &.overdue {
+                background-color: #ec9488;
+                color: white;
+            }
+            &.done {
+                background-color: #61bd4f;
+                color: white;
+            }
+            &.due-soon {
+                background-color: #f2d600;
+                color: $clr4;
+            }
+        }
+        svg {
+            width: 16px;
+            height: 16px;
+            margin-inline-start: 4px;
+            path {
+                fill: #42526e;
+            }
+        }
+    }
+}
